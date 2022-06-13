@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=League+Gothic&family=Pacifico&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Hind+Madurai&family=League+Gothic&family=Pacifico&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+.container {
+  margin: 0px auto;
+  width: 500px;
+  transition: all .5s ease;
+}
+h1 {
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+  color: red;
+}
+
+li, h2 {
+  font-family: 'Hind Madurai', sans-serif;
+  list-style: none;
+  width: 300px;
+}
+h2 {
+  color: white;
+  background-color: red;
+  font-size: 18px;
+  padding: 5px;
+  margin: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .5s ease;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+h2:hover {
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+}
+li {
+  background-color: rgb(230, 238, 236);
+  margin-top: 5px;
+  position: relative;
+  right: 40px;
+  transition: all .5s ease;
+}
+li:hover {
+  color: white;
+  background-color: rgb(115, 117, 128);
+}
+ul {
+  display: none;
+  transition: all 1s ease;
+  max-height: 500px;
+}
+
+#btn {
+  font-family: 'Hind Madurai', sans-serif;
+  padding: 5px 40px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  margin: 30px 0px 0px 70px;
+  font-size: 20px;
+  transition: all .5s ease;
+  border: 1px solid transparent;
+}
+#btn:hover {
+color: red;
+background-color: white;
+border: 1px solid red;
+border-radius: 50%;
+}
+input {
+  display: none;
+}
+label {
+  transition: all .5s ease;
+}
