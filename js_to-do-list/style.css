@@ -26,6 +26,7 @@ h2 {
   padding: 5px;
   height: 31px;
   width: 500px;
+  outline: none;
 }
 .btn {
   padding: 10.4px 0;
@@ -47,27 +48,52 @@ h2 {
   background-color: rgb(230, 216, 216);
 }
 .flex:hover {
-  background-color: rgb(165, 153, 153);
+  background-color: rgb(206, 194, 194);
 }
 .tick, .task, .delete {
-  padding: 18px 20px;
+  padding: 20px 20px;
 }
 .task {
   width: 650px;
+  margin-left: 15px;
 }
 .tick {
   color: white;
   font-size: 0px;
+  box-sizing: border-box;
 }
 .delete:hover {
   color: white;
   background-color: red;
+  cursor: pointer;
 }
 
 .hide {
   width: 200px;
 }
-
 .show {
   font-size: 25px;
+}
+
+
+.flex2 {
+  background: gray;
+}
+.flex2:nth-child(even) {
+  background: gray;
+}
+.flex2 .tick {
+  font-size: 18px;
+  max-height: 48px;
+}
+.flex2 .task {
+  margin: 0;
+  text-decoration: line-through;
+  color: white;
+}
+.flex2:hover {
+  background-color: gray;
+}
+.flex2 .delete {
+  color: white;
 }

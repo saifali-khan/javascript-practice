@@ -1,53 +1,44 @@
-let section = document.getElementById("sec");
-let input = document.getElementById("input");
 let button = document.querySelector(".btn");
-button.addEventListener("click", function checkValue() {
-  if (input.value == "") {
-    alert("empty task can not been added")
-  } else {
 
-    let flex = document.createElement("div");
-    flex.setAttribute("class", "flex");
-    section.appendChild(flex)
+button.addEventListener("click", function () {
+  let input = document.getElementById("input");
+  let text = input.value;
+  if (text !== "") {
 
-    let tick = document.createElement("div");
-    tick.setAttribute("class", "tick");
-    tick.innerHTML = "&#10004;";
-    flex.appendChild(tick);
-     
-    let task = document.createElement("div");
-    task.setAttribute("class", "task");
-    task.innerHTML = input.value;
-    flex.appendChild(task);
+  let section = document.querySelector("#sec");
 
-    let del = document.createElement("div");
-    del.setAttribute("class", "delete");
-    del.innerHTML = "x";
-    flex.appendChild(del);
+  let flex = document.createElement("div");
 
+  flex.className = "flex";
+  section.appendChild(flex);
 
-  }
+  let tick = document.createElement("div");
+  tick.classList.add("tick");
+  tick.innerHTML = "&#10004;";
+  flex.appendChild(tick);
+
+  let task = document.createElement("div");
+  task.innerHTML = text;
+  task.classList.add("task");
+  flex.appendChild(task);
+
+task.addEventListener("click", function () {
+  flex.classList.toggle("flex2")
 })
 
-let del = document.getElementsByClassName("delete");
+localStorage.setItem('task', task.innerHTML);
+localStorage.getItem("task", task.innerHTML);
 
-for (let i = 0; i < del.length;i++) {
-  del[i].onclick = function () {
-    var div = this.parentElement;
-    div.style.display = "none";
+  let del = document.createElement("div");
+  del.innerText = "x";
+  del.classList.add("delete")
+  flex.appendChild(del)
+
+  del.addEventListener("click", function () {
+    section.removeChild(flex);
+  })
   }
-}
-
-// let container = document.querySelector("#sec");
-// console.log(container.children.length)
-
-// let flex = document.getElementsByClassName("flex");
-// for (let f of flex) {
-  
-//   console.log(flex.innerText)
-// }
-
-const btn = document.getElementById("btn");
-btn.addEventListener("click", function changeSize() {
-  btn.classList.toggle('hide');
+  input.value = "";
 })
+
+
