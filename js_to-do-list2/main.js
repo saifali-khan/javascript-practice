@@ -1,68 +1,48 @@
 let myArray = [];
-
 let taskContainer = document.getElementById("task-container");
 let input = document.getElementById("inp");
 let btn = document.getElementById("btn");
-
-btn.addEventListener("click", event => {
+btn.addEventListener("click", (event) => {
   event.preventDefault();
   const text = input.value.trim();
-  if (text !== '') {
+  if (text !== "") {
     createTask(text);
-    input.value = '';
+    input.value = "";
   }
 });
-
 function createTask(text) {
-  const task = {id: myArray.length + 1, label : text, done: false };
+  const task = { id: myArray.length + 1, label: text, done: false };
   myArray.push(task);
   showTasks();
   input.value = "";
-  input.focus()
+  input.focus();
 }
-
-
-function showTasks(todo){
- let taskList = document.getElementById('task-container');
- const node = document.createElement("li");
-
- if (todo.done) {
-  // remove the item from the DOM
-  item.remove();
-  return
-}
-
- for (let todo of myArray) {
-  node.setAttribute('data-key', todo.id);
-  node.innerHTML = 
-    `<input id="${todo.id}" type="checkbox"/>
-     <span>${todo.label}</span>
-     <button class="delete-todo">x</button>
+function showTasks() {
+  let taskList = document.getElementById("task-container");
+  const node = document.createElement("li");
+  for (let todo of myArray) {
+    node.setAttribute("data-key", todo.id);
+    node.setAttribute("class", "flex")
+    node.innerHTML = `<input class ='tick' id="${todo.id}" type="checkbox"/>
+     <span class='span task'>${todo.label}</span>
+     <span class="delete-todo delete">x</span>
     `;
-   
-  taskList.append(node);
+    taskList.append(node);
   }
-
-
+  let flex = document.querySelectorAll(".flex");
+  let tick = document.querySelectorAll(".tick");
+for (let i = 0; i< tick.length;i++){
+  tick[i].onclick = function () {
+    flex[i].classList.toggle("flex2");
+  }
 }
-
-let list = document.getElementById('task-container');
-list.addEventListener("click", event => {
-  if (event.target.classList.contains('delete-todo')) {
-    const itemKey = event.target.parentElement.dataset.key;
-    deleteTodo(itemKey);
-  }
-})
-function deleteTodo(key) {
-  
-  let index = myArray.findIndex(item => item.id === Number(key));
-
-  const todo = {
-    deleted: true,
-    ...myArray[index]
+  deleteTask();
+}
+function deleteTask() {
+  var todo = document.querySelectorAll(".delete-todo");
+  for (var i = 0; i < todo.length; i++) {
+    todo[i].onclick = function () {
+      this.parentNode.remove()
+    };
   };
-
-  myArray = myArray.filter(item => item.id !== Number(key))
-
-  showTasks(todo)
-}
+};

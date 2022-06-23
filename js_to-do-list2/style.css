@@ -1,4 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=League+Gothic&family=Pacifico&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+* {
+  font-family: 'Hind Madurai', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
 .container {
-  width: 600px;
-  margin: 150px auto;
+  width: 750px;
+  margin: 0 auto;
+}
+.head {
+  background-color: rgb(228, 36, 36);
+  padding: 40px 40px 20px 40px;
+}
+li {
+  list-style: none;
+}
+h2 {
+  margin: 5px;
+  text-align: center;
+  color: white;
+}
+#inp {
+  padding: 5px;
+  height: 31px;
+  width: 500px;
+  outline: none;
+}
+#btn {
+  padding: 10.4px 0;
+  display: inline-block;
+  position: relative;
+  right: 5px;
+  top: .5px;
+  border: 1px solid transparent;
+  width: 151px;
+  text-transform: capitalize;
+  font-size: 18px;
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+  background-color: rgb(243, 240, 240);
+}
+.flex:nth-child(even) {
+  background-color: rgb(230, 216, 216);
+}
+.flex:hover {
+  background-color: rgb(206, 194, 194);
+}
+.tick, .task, .delete {
+  padding: 14px 18px;
+}
+.task {
+  width: 650px;
+  margin-left: 10px;
+}
+.delete:hover {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+.tick {
+  position: relative;
+  top: 12px;
+  left: 10px;
+}
+
+.flex2 {
+  background: gray;
+}
+.flex2:nth-child(even) {
+  background: gray;
+}
+.flex2 .task {
+  text-decoration: line-through;
+  color: white;
+}
+.flex2:hover {
+  background-color: gray;
+}
+.flex2 .delete {
+  color: white;
 }
