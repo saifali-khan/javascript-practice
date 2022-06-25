@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=League+Gothic&family=Pacifico&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("https://c1.wallpaperflare.com/preview/331/424/14/people-crowd-spectators-stadium-thumbnail.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  width: 700px;
+  margin: 30vh auto;
+  justify-content: space-between;
+}
+.key {
+  width: 100px;
+  padding: 6px 10px;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px;
+  color: #ffffff;
+  font-family: 'hind-madurai', sans-serif;
+  border-radius: 5px;
+  transition: all 0.07s;
+  text-align: center;
+}
+kbd {
+  font-size: 20px;
+}
+.sound {
+  display: block;
+  font-size: 12px;
+  color: rgb(243, 230, 44);
+  font-style: italic;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: rgb(243, 230, 44);
+  box-shadow: 0 0 10px rgb(243, 230, 44);
+}
