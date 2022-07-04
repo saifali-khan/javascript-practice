@@ -1,0 +1,24 @@
+#container {
+  display: flex;
+  align-items: center;
+  width: 1080px;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+#btn {
+color: white;
+background-color: orange;
+padding: 20px 50px;
+border: 1px solid orange;
+border-radius: 5px;
+margin: 0 auto;
+display: block;
+font-size: 20px;
+}
+img {
+height: 180px;
+width: 180px;
+border: 1px solid orange;
+margin: 50px 0;
+}
