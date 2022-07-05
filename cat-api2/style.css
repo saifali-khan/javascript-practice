@@ -1,0 +1,32 @@
+.img-container {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+#form {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+} 
+#text {
+  width: 500px;
+  height: 60px;
+  font-size: 18px;
+  outline:none;
+}
+#btn {
+color: white;
+background-color: orange;
+padding: 20px 50px;
+border: 1px solid orange;
+font-size: 20px;
+}
+img {
+height: 180px;
+width: 180px;
+border: 1px solid orange;
+margin: 50px 0;
+}
