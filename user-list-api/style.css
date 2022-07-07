@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Hind+Madurai&family=League+Gothic&family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&family=Poppins:ital,wght@0,300;1,300&family=Rubik:wght@300&family=Secular+One&family=Ubuntu:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: 'open sans', sans-serif;
+  background-image: url("https://media.istockphoto.com/photos/man-walking-through-a-busy-open-plan-office-picture-id869285818?k=20&m=869285818&s=612x612&w=0&h=2Yb0gy3FZA-Ih7I6Wca8gHo5oYGYgQDbF9rOBJCySTw=");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: .5;
+  z-index: -1;
+}
+.profile-card {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  top: 15vh;
+}
+.profile-head {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: rgb(82, 82, 226);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 20px;
+  border: 4px solid #fff;
+}
+.profile-body {
+  padding: 10px;
+  background: rgb(212, 210, 210);
+  color: gray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.info {
+  display: flex;
+  align-items: center;
+  background: rgb(250, 246, 246);
+  margin: 20px 10px;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px;
+  transition: all .2s;
+}
+.info:hover {
+  box-shadow: none;
+}
+.material-icons {
+  margin-right: 10px;
+}
+#btn {
+  position: relative;
+  top: 18vh;
+  padding: 12px 15px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: none;
+  transition: all .2s;
+}
+#btn:hover {
+  background-color: rgb(82, 82, 226);
+  color: #fff; 
+}

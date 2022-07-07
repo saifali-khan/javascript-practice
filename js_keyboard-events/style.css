@@ -36,7 +36,7 @@ body {
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around
 }
 .cards {
   width: 315px;
@@ -45,7 +45,8 @@ section {
   margin: 10px;
 }
 .cards:hover {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 1px 1px 10px black;
+  transform: scale(1.01)
 }
 .card-header {
   background-color: rgb(250, 188, 17);
