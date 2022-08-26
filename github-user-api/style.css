@@ -87,10 +87,10 @@ img {
   width: 450px;
   justify-content: space-between;
 }
-#blog {
-  display: block;
+.blog {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .foot {
   margin: 30px 0;
